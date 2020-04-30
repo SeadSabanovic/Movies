@@ -1,0 +1,295 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    scroll-behavior: smooth;
+}
+body {
+    background: #272727;
+    text-align: center;
+    color: #fff;
+}
+/*main wrapp*/
+.main-wrapp {
+    width: 1200px;
+    margin: 0 auto;
+}
+@media screen and (max-width: 1200px) {
+    .main-wrapp {
+        width: 100%;
+    }
+}
+
+header {
+    width: 100%;
+    height: 100vh;
+}
+header .logo {
+    position: fixed;
+    top: 0;
+    left: 0;
+    font-weight: 900;
+    font-size: 2rem;
+    padding: 10px;
+    background: rgba(0,0,0,.5);
+    border-bottom-right-radius: 8px;
+    z-index: 11;
+}
+header .logo span {
+    color: rgb(211, 71, 71);
+}
+header nav {
+    z-index: 10;
+    position: fixed;
+    right: 0;
+    bottom: 0;
+    height: 100vh;
+    width: 100px;
+    background: rgb(26, 26, 26);
+    transform: translateX(100%);
+    transition: all .3s ease-in-out;
+    box-shadow: -5px 0 10px rgba(0,0,0,.5);
+}
+header nav a {
+    text-decoration: none;
+    color:#fff;
+}
+header nav .icons {
+    height: 100%;
+    font-size: 2rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+    cursor: pointer;
+}
+header nav .icons i {
+    padding: 10px;
+    box-shadow: inset 3px 3px 7px rgba(26, 26, 26, 0.8), inset -3px -3px 7px rgba(95, 95, 95, 0.3);
+    border-radius: 8px;
+    border: 1px solid rgba(48, 48, 48, 0.3);
+    
+    transition: all .1s ease-in-out;
+}
+header nav .icons i:hover {
+    color: rgba(255, 85, 85, 0.7);
+}
+header nav.active {
+    transform: translateX(0);
+}
+header nav .burger {
+    position: absolute;
+    top: 0;
+    left: 0;
+    transform: translateX(-100%);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 3rem;
+    height: 3rem;
+    font-size: 2rem;
+    background: rgb(211, 71, 71);
+    cursor: pointer;
+    border-bottom-left-radius: 8px;
+}
+.banner {
+    height: 100%;
+    width: 100%;
+    background: url('../img/banner.jpg');
+    background-position: center;
+    background-size: cover;
+    background-attachment: fixed;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.banner h1 {
+    font-size: 3rem;
+    margin: 5px 0;
+    color: rgb(255, 85, 85);
+    text-shadow: 2px 2px 3px rgba(0,0,0,.5);
+}
+.banner p {
+    font-size: 1.5rem;
+    margin: 5px 0;
+    text-shadow: 2px 2px 3px rgba(0,0,0,.6);
+}
+.banner button {
+    font-size: 1.8rem;
+    margin: 5px 0;
+    border: none;
+    background: rgba(0,0,0,.3);
+    color: #fff;
+    padding: 10px;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: all .2s ease-in-out;
+}
+.banner button:focus {
+    outline: none;
+}
+.banner button:hover {
+    background: rgba(211, 71, 71,.3);
+}
+
+/*main*/
+/*sec1*/
+.sec1 {
+    margin-top: 2rem;
+}
+.sec1-heading {
+    display: inline-block;
+    font-size: 2rem;
+    padding: 20px;
+    margin: 20px 0;
+    box-shadow: inset 3px 3px 7px rgba(26, 26, 26, 0.8), inset -3px -3px 7px rgba(95, 95, 95, 0.3);
+    font-weight: 900;
+    border-radius: 8px;
+    border: 1px solid rgba(54, 54, 54, 0.3) ;
+}
+.movie-wrapp {
+    display: flex;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+}
+.movie-card {
+    width: 250px;
+    height: 300px;
+    border-radius: 8px;
+    margin: 25px;
+    cursor: pointer;
+    border: 1px solid rgba(54, 54, 54, 1);
+    box-shadow: inset 6px 6px 10px rgba(26, 26, 26, 0.8), inset -6px -6px 10px rgba(95, 95, 95, 0.3);
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: all .2s ease-in-out;
+}
+.movie-card:hover {
+    transform: scale(1.1);
+}
+.card1 {
+    background: url('../img/badBoys.jpg');
+    background-position: center botom;
+    background-size: cover;
+}
+.card2 {
+    background: url('../img/theAssistant.jpg');
+    background-position: center top;
+    background-size: cover;
+}
+.card3 {
+    background: linear-gradient(rgba(0,0,0,.9),rgba(0,0,0,.9)),url('../img/sorryWeMissedYou.jpg');
+    background-position: center top;
+    background-size: cover;
+}
+.card4 {
+    background: linear-gradient(rgba(0,0,0,.9),rgba(0,0,0,.9)),url('../img/colorOutOfSpace.jpg');
+    background-position: center top;
+    background-size: cover;
+}
+.card5 {
+    background: linear-gradient(rgba(0,0,0,.9),rgba(0,0,0,.9)),url('../img/neverRarely.jpg');
+    background-position: center bottom;
+    background-size: cover;
+}
+.card6 {
+    background: linear-gradient(rgba(0,0,0,.9),rgba(0,0,0,.9)),url('../img/joker.png');
+    background-position: center bottom;
+    background-size: cover;
+}
+.card7 {
+    background: linear-gradient(rgba(0,0,0,.9),rgba(0,0,0,.9)),url('../img/theHunt.png');
+    background-position: center bottom;
+    background-size: cover;
+}
+.card8 {
+    background: linear-gradient(rgba(0,0,0,.9),rgba(0,0,0,.9)),url('../img/brahms.jpg');
+    background-position: center bottom;
+    background-size: cover;
+}
+
+/*sec2*/
+.sec2 {
+    margin-top: 2rem;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+}
+.sec2 div {
+    width: 500px;
+    height: 500px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 20px 0;
+}
+@media screen and (max-width: 600px) {
+    .sec2 div {
+        width: 80%;
+    }
+}
+.sec2 div:nth-child(1) {
+    box-shadow: 6px 6px 10px rgba(26, 26, 26, 0.8), -6px -6px 10px rgba(95, 95, 95, 0.3);
+    border-radius: 8px;
+}
+.sec2-heading, .sec3-heading {
+    display: inline-block;
+    font-size: 2rem;
+    padding: 10px;
+    margin: 20px 0;
+    box-shadow: inset 3px 3px 7px rgba(26, 26, 26, 0.8), inset -3px -3px 7px rgba(95, 95, 95, 0.3);
+    font-weight: 900;
+    border-radius: 8px;
+    background: rgb(35,35,35);
+    border: 1px solid rgba(54, 54, 54, 0.3);
+}
+.sec2 p {
+    font-size: 1.2rem;
+    padding: 20px;
+}
+.sec2-banner {
+    background: linear-gradient(rgba(255, 85, 85, 0.7),rgba(0,0,0,.9)),url('../img/snacks.jpg');
+    background-position: center;
+    background-size: cover;
+    border-radius: 8px;
+}
+
+/*sec3*/
+.sec3 {
+    margin-top: 2rem;
+    width: 100%;
+}
+.sec3-banner {
+    width: 100%;
+    background: url('../img/projection.jpg');
+    background-position: center;
+    background-size: cover;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.sec3-banner p {
+    text-shadow: 2px 2px 5px #000;
+    font-size: 1.2rem;
+    padding: 30px;
+    max-width: 500px;
+}
+
+/*footer*/
+footer {
+    background: #000;
+    width: 100%;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    flex-wrap: wrap;
+}
+footer div {
+    padding: 20px;
+}

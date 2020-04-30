@@ -1,0 +1,98 @@
+
+.seat {
+    background: rgba(131, 131, 131, 0.267);
+    height: 18px;
+    width: 20px;
+    margin: 3px;
+    border-top-left-radius: 8px;
+    border-top-right-radius: 8px;
+}
+.seat.selected {
+    background: #ffffff;
+}
+.seat.occupied {
+    background: rgb(211,71,71);
+}
+.seat:nth-of-type(2) {
+    margin-right: 15px;
+}
+.seat:nth-last-of-type(2) {
+    margin-left: 15px;
+}
+.seat:not(.occupied):hover {
+    cursor: pointer;
+    transform: scale(1.2)
+}
+.seats-showcase .seat:not(.occupied):hover {
+    cursor: default;
+    transform: scale(1)
+}
+.seats-showcase {
+    background: rgba(0,0,0,.1);
+    padding: 20px;
+    margin: 5px 10px;
+    border-radius: 8px;
+    display: flex;
+    flex-wrap: wrap;
+    list-style: none;
+    align-items: baseline;
+    justify-content: space-around;
+    box-shadow: inset 3px 3px 7px rgba(26, 26, 26, 0.8), inset -3px -3px 7px rgba(95, 95, 95, 0.3);
+}
+.seats-showcase li {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 20px;
+}
+.seats-showcase li small {
+    margin-left: 5px;
+    font-size: 1.1rem;
+}
+.row {
+    display: flex;
+}
+.screen {
+    background: url('../img/projection.jpg');
+    background-position: center;
+    background-size: cover;
+    height: 100px;
+    width: 100%;
+    margin: 15px 0;
+    transform: rotateX(-40deg);
+    box-shadow: 0 3px 6px rgba(255,255,255,.7);
+}
+.container {
+    width: 70%;
+    margin: auto;
+    perspective: 900px;
+    margin-bottom: 30px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+p.text {
+    margin: 20px 0;
+    font-size: 2rem;
+}
+p.text span {
+    color: rgb(211,71,71);
+}
+.checkOut {
+    font-size: 2rem;
+    background: rgba(0,0,0,.1);
+    border-radius: 8px;
+    padding: 20px;
+    border: none;
+    color: #fff;
+    cursor: pointer;
+    box-shadow: 3px 3px 7px rgba(26, 26, 26, 0.8), -3px -3px 7px rgba(95, 95, 95, 0.3);
+    transition: all .1s ease-in-out;
+}
+.checkOut:focus {
+    outline: none;
+}
+.checkOut:hover {
+    box-shadow: inset 3px 3px 7px rgba(26, 26, 26, 0.8), inset -3px -3px 7px rgba(95, 95, 95, 0.3);
+}
